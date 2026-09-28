@@ -1,0 +1,22 @@
+ID,Name,Status,Site,Location,Rack,Role,Manufacturer,Type
+101,DH1-SWB-01,Active,DC-Sample,DH1,,LV switchboard,Generic,LV switchboard 400 V
+102,DH1-UPS-01,Active,DC-Sample,DH1,,UPS,Generic,UPS module 300 kVA
+103,DH1-CRAH-01,Active,DC-Sample,DH1,,Cooling,Generic,CRAH unit
+104,DH1-CRAH-02,Active,DC-Sample,DH1,,Cooling,Generic,CRAH unit
+105,DH1-BMS-01,Active,DC-Sample,DH1,DH1-R01,BMS controller,Schneider Electric,SpaceLogic AS-P-NL
+106,DH1-PDU-R01,Active,DC-Sample,DH1,DH1-R01,Rack PDU,Vertiv,VP5N31A0
+107,DH1-PDU-R02,Active,DC-Sample,DH1,DH1-R02,Rack PDU,APC,AP7821
+201,DH2-SWB-01,Active,DC-Sample,DH2,,LV switchboard,Generic,LV switchboard 400 V
+202,DH2-UPS-01,Active,DC-Sample,DH2,,UPS,Generic,UPS module 300 kVA
+203,DH2-CRAH-01,Active,DC-Sample,DH2,,Cooling,Generic,CRAH unit
+204,DH2-CRAH-02,Active,DC-Sample,DH2,,Cooling,Generic,CRAH unit
+205,DH2-BMS-01,Active,DC-Sample,DH2,DH2-R01,BMS controller,Schneider Electric,SpaceLogic AS-P-NL
+206,DH2-PDU-R01,Active,DC-Sample,DH2,DH2-R01,Rack PDU,Vertiv,VP5N31A0
+207,DH2-PDU-R02,Active,DC-Sample,DH2,DH2-R02,Rack PDU,APC,AP7821
+301,DH3-SWB-01,Staged,DC-Sample,DH3,,LV switchboard,Generic,LV switchboard 400 V
+302,DH3-UPS-01,Staged,DC-Sample,DH3,,UPS,Generic,UPS module 300 kVA
+303,DH3-CRAH-01,Staged,DC-Sample,DH3,,Cooling,Generic,CRAH unit
+304,DH3-CRAH-02,Staged,DC-Sample,DH3,,Cooling,Generic,CRAH unit
+305,DH3-BMS-01,Staged,DC-Sample,DH3,DH3-R01,BMS controller,Schneider Electric,SpaceLogic AS-P-NL
+306,DH3-PDU-R01,Staged,DC-Sample,DH3,DH3-R01,Rack PDU,Vertiv,VP5N31A0
+307,DH3-PDU-R02,Staged,DC-Sample,DH3,DH3-R02,Rack PDU,APC,AP7821

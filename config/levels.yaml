@@ -1,0 +1,52 @@
+# Commissioning levels, in the order they must close.
+#
+# L1 to L5 is industry convention, not a standard. Sources describe the
+# levels differently (L2 is "site acceptance" in one and "delivery and static
+# inspection" in another; some firms use levels 0 to 6), so edit this file to
+# match the project's own commissioning (Cx) plan. The gate logic only relies
+# on the order of the list and on `energisation_level`; `definition`,
+# `evidence` and `signoff` are carried into the report as reference text.
+#
+# Sources for the default definitions below:
+#   https://anvilfield.com/field-guides/datacenter/data-center-commissioning-levels-process/
+#   https://a3aengenharia.com/en-us/content/technical-articles/data-center-commissioning-tests-levels-acceptance-criteria/
+#   https://projectcm.com.au/expertise/data-center-commissioning-levels
+#   https://archdesk.com/blog/data-center-commissioning-levels
+
+# The level at which equipment is first powered up. From this gate onward,
+# the hall's capacity check has to pass.
+energisation_level: L3
+
+# L5 (IST) is run once per hall, not per device.
+hall_level: L5
+
+levels:
+  - id: L1
+    name: Factory acceptance
+    definition: Equipment tested at the factory, before it ships, against its specification.
+    evidence: [witnessed FAT report]
+    signoff: [vendor, contractor, commissioning agent]
+
+  - id: L2
+    name: Delivery and installation verification
+    definition: Equipment checked on delivery and after installation, unpowered, against drawings and specification.
+    evidence: [delivery inspection record, installation checklist]
+    signoff: [contractor, commissioning agent]
+
+  - id: L3
+    name: Pre-functional and start-up
+    definition: Each piece of equipment powered up for the first time and checked on its own.
+    evidence: [start-up checklist, vendor start-up report]
+    signoff: [vendor, contractor, commissioning agent]
+
+  - id: L4
+    name: Functional performance testing
+    definition: Each system tested against its design sequence of operation, one system at a time.
+    evidence: [executed FPT script]
+    signoff: [contractor, commissioning agent, owner]
+
+  - id: L5
+    name: Integrated systems testing (IST)
+    definition: All systems in the hall tested together at simulated design load, including failure scenarios such as utility loss.
+    evidence: [executed IST script, load bank records]
+    signoff: [commissioning agent, owner]

@@ -1,0 +1,12 @@
+# Run settings for gate.py.
+
+# The date the verdicts are taken as of.
+status_date: 2026-10-05
+
+# The NetBox site whose halls are checked (NetBox "Location" = one hall).
+site: DC-Sample
+
+# Waivers let a documented exception stand in for a missing prerequisite
+# (for example, minor work clearly outside the system under test). Off by
+# default. When on, a waived gap can never give better than "conditional".
+allow_waivers: false

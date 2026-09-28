@@ -1,0 +1,664 @@
+{
+  "count": 21,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 101,
+      "name": "DH1-SWB-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "LV switchboard"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "LV switchboard 400 V",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 102,
+      "name": "DH1-UPS-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "UPS"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "UPS module 300 kVA",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 103,
+      "name": "DH1-CRAH-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "Cooling"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "CRAH unit",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 104,
+      "name": "DH1-CRAH-02",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "Cooling"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "CRAH unit",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 105,
+      "name": "DH1-BMS-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      },
+      "rack": {
+        "id": 11,
+        "name": "DH1-R01"
+      },
+      "role": {
+        "id": 0,
+        "name": "BMS controller"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "SpaceLogic AS-P-NL",
+        "manufacturer": {
+          "id": 0,
+          "name": "Schneider Electric"
+        }
+      }
+    },
+    {
+      "id": 106,
+      "name": "DH1-PDU-R01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      },
+      "rack": {
+        "id": 11,
+        "name": "DH1-R01"
+      },
+      "role": {
+        "id": 0,
+        "name": "Rack PDU"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "VP5N31A0",
+        "manufacturer": {
+          "id": 0,
+          "name": "Vertiv"
+        }
+      }
+    },
+    {
+      "id": 107,
+      "name": "DH1-PDU-R02",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      },
+      "rack": {
+        "id": 12,
+        "name": "DH1-R02"
+      },
+      "role": {
+        "id": 0,
+        "name": "Rack PDU"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "AP7821",
+        "manufacturer": {
+          "id": 0,
+          "name": "APC"
+        }
+      }
+    },
+    {
+      "id": 201,
+      "name": "DH2-SWB-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "LV switchboard"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "LV switchboard 400 V",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 202,
+      "name": "DH2-UPS-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "UPS"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "UPS module 300 kVA",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 203,
+      "name": "DH2-CRAH-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "Cooling"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "CRAH unit",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 204,
+      "name": "DH2-CRAH-02",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "Cooling"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "CRAH unit",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 205,
+      "name": "DH2-BMS-01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      },
+      "rack": {
+        "id": 21,
+        "name": "DH2-R01"
+      },
+      "role": {
+        "id": 0,
+        "name": "BMS controller"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "SpaceLogic AS-P-NL",
+        "manufacturer": {
+          "id": 0,
+          "name": "Schneider Electric"
+        }
+      }
+    },
+    {
+      "id": 206,
+      "name": "DH2-PDU-R01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      },
+      "rack": {
+        "id": 21,
+        "name": "DH2-R01"
+      },
+      "role": {
+        "id": 0,
+        "name": "Rack PDU"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "VP5N31A0",
+        "manufacturer": {
+          "id": 0,
+          "name": "Vertiv"
+        }
+      }
+    },
+    {
+      "id": 207,
+      "name": "DH2-PDU-R02",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      },
+      "rack": {
+        "id": 22,
+        "name": "DH2-R02"
+      },
+      "role": {
+        "id": 0,
+        "name": "Rack PDU"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "AP7821",
+        "manufacturer": {
+          "id": 0,
+          "name": "APC"
+        }
+      }
+    },
+    {
+      "id": 301,
+      "name": "DH3-SWB-01",
+      "status": {
+        "value": "staged",
+        "label": "Staged"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "LV switchboard"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "LV switchboard 400 V",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 302,
+      "name": "DH3-UPS-01",
+      "status": {
+        "value": "staged",
+        "label": "Staged"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "UPS"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "UPS module 300 kVA",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 303,
+      "name": "DH3-CRAH-01",
+      "status": {
+        "value": "staged",
+        "label": "Staged"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "Cooling"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "CRAH unit",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 304,
+      "name": "DH3-CRAH-02",
+      "status": {
+        "value": "staged",
+        "label": "Staged"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      },
+      "rack": null,
+      "role": {
+        "id": 0,
+        "name": "Cooling"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "CRAH unit",
+        "manufacturer": {
+          "id": 0,
+          "name": "Generic"
+        }
+      }
+    },
+    {
+      "id": 305,
+      "name": "DH3-BMS-01",
+      "status": {
+        "value": "staged",
+        "label": "Staged"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      },
+      "rack": {
+        "id": 31,
+        "name": "DH3-R01"
+      },
+      "role": {
+        "id": 0,
+        "name": "BMS controller"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "SpaceLogic AS-P-NL",
+        "manufacturer": {
+          "id": 0,
+          "name": "Schneider Electric"
+        }
+      }
+    },
+    {
+      "id": 306,
+      "name": "DH3-PDU-R01",
+      "status": {
+        "value": "staged",
+        "label": "Staged"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      },
+      "rack": {
+        "id": 31,
+        "name": "DH3-R01"
+      },
+      "role": {
+        "id": 0,
+        "name": "Rack PDU"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "VP5N31A0",
+        "manufacturer": {
+          "id": 0,
+          "name": "Vertiv"
+        }
+      }
+    },
+    {
+      "id": 307,
+      "name": "DH3-PDU-R02",
+      "status": {
+        "value": "staged",
+        "label": "Staged"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      },
+      "rack": {
+        "id": 32,
+        "name": "DH3-R02"
+      },
+      "role": {
+        "id": 0,
+        "name": "Rack PDU"
+      },
+      "device_type": {
+        "id": 0,
+        "model": "AP7821",
+        "manufacturer": {
+          "id": 0,
+          "name": "APC"
+        }
+      }
+    }
+  ]
+}

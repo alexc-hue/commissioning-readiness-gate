@@ -1,0 +1,211 @@
+{
+  "count": 12,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 11,
+      "name": "DH1-R01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      }
+    },
+    {
+      "id": 12,
+      "name": "DH1-R02",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      }
+    },
+    {
+      "id": 13,
+      "name": "DH1-R03",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      }
+    },
+    {
+      "id": 14,
+      "name": "DH1-R04",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 1,
+        "name": "DH1"
+      }
+    },
+    {
+      "id": 21,
+      "name": "DH2-R01",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      }
+    },
+    {
+      "id": 22,
+      "name": "DH2-R02",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      }
+    },
+    {
+      "id": 23,
+      "name": "DH2-R03",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      }
+    },
+    {
+      "id": 24,
+      "name": "DH2-R04",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 2,
+        "name": "DH2"
+      }
+    },
+    {
+      "id": 31,
+      "name": "DH3-R01",
+      "status": {
+        "value": "planned",
+        "label": "Planned"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      }
+    },
+    {
+      "id": 32,
+      "name": "DH3-R02",
+      "status": {
+        "value": "planned",
+        "label": "Planned"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      }
+    },
+    {
+      "id": 33,
+      "name": "DH3-R03",
+      "status": {
+        "value": "planned",
+        "label": "Planned"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      }
+    },
+    {
+      "id": 34,
+      "name": "DH3-R04",
+      "status": {
+        "value": "planned",
+        "label": "Planned"
+      },
+      "site": {
+        "id": 1,
+        "name": "DC-Sample",
+        "slug": "dc-sample"
+      },
+      "location": {
+        "id": 3,
+        "name": "DH3"
+      }
+    }
+  ]
+}

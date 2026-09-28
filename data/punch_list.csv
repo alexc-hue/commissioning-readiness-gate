@@ -1,0 +1,8 @@
+item_id,hall,device_id,category,status,description,raised,owner,closed
+P-101,DH1,105,C,open,BMS panel labels to match as-built schedule,2026-09-10,Controls contractor,
+P-102,DH1,103,B,closed,CRAH condensate line insulation incomplete,2026-09-02,Mechanical contractor,2026-09-18
+P-201,DH2,202,B,open,UPS O&M manual not yet submitted,2026-09-14,Electrical contractor,
+P-202,DH2,204,B,open,CRAH filter access panel fixing missing,2026-09-16,Mechanical contractor,
+P-203,DH2,201,A,closed,Switchboard incomer protection settings not applied,2026-09-01,Electrical contractor,2026-09-12
+P-301,DH3,301,A,open,Busbar joint torque records missing for two sections,2026-09-25,Electrical contractor,
+P-302,DH3,306,C,open,Rack PDU cable labels to be reprinted,2026-09-26,IT fit-out contractor,
