@@ -4,7 +4,7 @@ All notable changes to this project are recorded here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and version numbers
 follow [Semantic Versioning](https://semver.org/).
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2026-09-28
 
 First release. Gives each data hall a ready / conditional / not-ready verdict, with reasons, for starting its next commissioning level, from NetBox assets, commissioning records, a punch list and a capacity figure. All sample data is synthetic.
 
