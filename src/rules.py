@@ -65,17 +65,40 @@ def _is_closed(rec: pd.Series) -> bool:
     return rec["status"] == "closed" and rec["signed_by"].strip() != ""
 
 
-def _record_state(records: pd.DataFrame, device_id: int, level: str) -> str:
-    """'closed', 'closed but unsigned', 'open' or 'not started'."""
-    rows = records[(records["device_id"] == device_id) & (records["level"] == level)]
-    if rows.empty:
-        return "not started"
-    rec = rows.iloc[-1]
+def _state_of(rec) -> str:
+    """'closed', 'closed but unsigned', or the record's own status ('open' if blank)."""
     if _is_closed(rec):
         return "closed"
     if rec["status"] == "closed":
         return "closed but unsigned"
     return rec["status"] or "open"
+
+
+def _record_state(records: pd.DataFrame, device_id: int, level: str) -> str:
+    """'closed', 'closed but unsigned', 'open' or 'not started'."""
+    rows = records[(records["device_id"] == device_id) & (records["level"] == level)]
+    if rows.empty:
+        return "not started"
+    return _state_of(rows.iloc[-1])
+
+
+def _record_states(records: pd.DataFrame) -> dict:
+    """Every (device_id, level) state in one pass over the hall's records.
+
+    Same answer as _record_state for each pair (the last record for a pair
+    wins), without filtering the DataFrame again for every lookup. Missing
+    pairs are 'not started'; look them up with _lookup.
+    """
+    states = {}
+    for rec in records.to_dict("records"):
+        if pd.isna(rec["device_id"]):
+            continue
+        states[(rec["device_id"], rec["level"])] = _state_of(rec)
+    return states
+
+
+def _lookup(states: dict, device_id, level: str) -> str:
+    return states.get((device_id, level), "not started")
 
 
 def evaluate_hall(hall: str, inputs: Inputs, levels: Levels, settings: dict) -> HallResult:
@@ -92,19 +115,20 @@ def evaluate_hall(hall: str, inputs: Inputs, levels: Levels, settings: dict) -> 
         raise ValueError(f"Hall {hall!r} has no devices in the NetBox input")
     records = inputs.commissioning[inputs.commissioning["hall"] == hall]
     device_levels = [lv for lv in levels.order if lv != levels.hall_level]
+    states = _record_states(records)
     reasons: list[Reason] = []
 
     # SEQUENCE
     for _, dev in devices.iterrows():
-        states = {lv: _record_state(records, dev["device_id"], lv) for lv in device_levels}
+        dev_states = {lv: _lookup(states, dev["device_id"], lv) for lv in device_levels}
         for i, lv in enumerate(device_levels):
-            if states[lv] != "closed":
+            if dev_states[lv] != "closed":
                 continue
-            earlier_gap = next((e for e in device_levels[:i] if states[e] != "closed"), None)
+            earlier_gap = next((e for e in device_levels[:i] if dev_states[e] != "closed"), None)
             if earlier_gap:
                 reasons.append(Reason(
                     "SEQUENCE", BLOCKS,
-                    f"{dev['name']}: {lv} recorded closed while {earlier_gap} is {states[earlier_gap]}",
+                    f"{dev['name']}: {lv} recorded closed while {earlier_gap} is {dev_states[earlier_gap]}",
                 ))
 
     # PREREQ / WAIVED
@@ -112,7 +136,7 @@ def evaluate_hall(hall: str, inputs: Inputs, levels: Levels, settings: dict) -> 
     waivers = inputs.waivers
     for _, dev in devices.iterrows():
         for lv in required:
-            state = _record_state(records, dev["device_id"], lv)
+            state = _lookup(states, dev["device_id"], lv)
             if state == "closed":
                 continue
             waived = settings["allow_waivers"] and not waivers[
@@ -178,7 +202,7 @@ def evaluate_hall(hall: str, inputs: Inputs, levels: Levels, settings: dict) -> 
     progress = {}
     for i, lv in enumerate(device_levels):
         closed = sum(
-            all(_record_state(records, d, e) == "closed" for e in device_levels[: i + 1])
+            all(_lookup(states, d, e) == "closed" for e in device_levels[: i + 1])
             for d in devices["device_id"]
         )
         progress[lv] = (closed, len(devices))
