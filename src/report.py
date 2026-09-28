@@ -87,8 +87,29 @@ def _cell_color(closed: int, total: int) -> str:
     return STATUS_WARNING if closed else NOT_STARTED
 
 
+# The readiness chart shows at most this many halls. Its height grows with
+# every hall, so a site with hundreds of halls produced a very tall image
+# and most of the run's memory. Every hall is still in report.md.
+CHART_TOP_N = 30
+_VERDICT_PRIORITY = {NOT_READY: 0, "conditional": 1, READY: 2}
+
+
+def chart_halls(results: list[HallResult]) -> list[HallResult]:
+    """The halls the chart shows: all of them, or the CHART_TOP_N furthest
+    from ready (not ready, then conditional, soonest planned date first),
+    kept in their usual order."""
+    if len(results) <= CHART_TOP_N:
+        return results
+    ranked = sorted(range(len(results)),
+                    key=lambda i: (_VERDICT_PRIORITY.get(results[i].verdict, 3), results[i].days_to_planned, i))
+    keep = set(ranked[:CHART_TOP_N])
+    return [r for i, r in enumerate(results) if i in keep]
+
+
 def write_chart(results: list[HallResult], levels: Levels, path: str) -> None:
     """Halls by level: closed/total per cell, the next level outlined, then the verdict."""
+    total = len(results)
+    results = chart_halls(results)
     cols = levels.order + ["Verdict"]
     fig, ax = plt.subplots(figsize=(9, 1.2 + 0.8 * len(results)))
     for row, r in enumerate(results):
@@ -119,7 +140,8 @@ def write_chart(results: list[HallResult], levels: Levels, path: str) -> None:
     apply_chrome(fig, ax)
     ax.set_title(
         "Commissioning progress by hall (devices closed and signed / total; "
-        "outlined = next level)",
+        "outlined = next level)"
+        + (f", {len(results)} furthest from ready of {total} halls" if len(results) < total else ""),
         fontsize=10, color=INK,
     )
     fig.savefig(path, dpi=150, bbox_inches="tight")
