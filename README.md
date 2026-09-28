@@ -165,6 +165,15 @@ level is energisation. Sources for the defaults:
   in NetBox at all.
 - Sign-off roles in `levels.yaml` are placeholders.
 
+## Limitations
+
+- Size-tested with `benchmarks/size_test.py` by repeating the sample halls,
+  on a 2018 laptop (Intel i7-8750H, Python 3.14), single runs, so treat the
+  numbers as a guide: 30 halls (210 devices) run in about 2 seconds, 300
+  halls in about 6 and 1,000 halls in about 20, using around 150 MB. The
+  readiness chart shows the 30 halls furthest from ready; report.md covers
+  every hall.
+
 ## Run it
 
 ```bash
