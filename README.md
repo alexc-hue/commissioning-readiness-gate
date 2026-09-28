@@ -196,3 +196,8 @@ NETBOX_TOKEN=... python gate.py --netbox-url https://netbox.example.com --site-s
 
 The tests run the adapter against NetBox-shaped API responses in
 `tests/fixtures/netbox_api/`, so CI doesn't need a NetBox server.
+
+To see how it copes with sites with more halls, run `python
+benchmarks/size_test.py`. It prints run time and peak memory at each size.
+It's a hand-run check, not part of the test suite; measured numbers are
+under Limitations.
