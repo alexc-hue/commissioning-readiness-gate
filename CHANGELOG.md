@@ -4,6 +4,20 @@ All notable changes to this project are recorded here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and version numbers
 follow [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2026-11-12
+
+Maintenance release. The tool's output is unchanged.
+
+### Changed
+
+- `pytest>=9.0.3` in `requirements-dev.txt` (was `>=7.0`).
+- CI runs the tests on Python 3.11, 3.12, 3.13 and 3.14 (was 3.11 and 3.12).
+- CI actions are updated (checkout v7.0.1, setup-python v7.1.0, codecov-action v7.1.1) and pinned
+  to commit SHAs, not tags.
+- README: the list of related repos is the same in all eight repos now. It names the six toolkit
+  tools, then the two data center practice models separately.
+- `.gitignore` also covers `.env` files, ruff and coverage caches, build output and editor folders.
+
 ## [1.1.0] - 2026-09-28
 
 Performance at larger sizes. Output is unchanged: the console report and report.md are byte-identical to the previous release on the sample data and on generated inputs, and every chart renders pixel-identical on the sample data, so no committed image changed. The only visible difference is on inputs larger than a chart's cap, where the chart now shows a subset and says so in its title.
@@ -35,5 +49,6 @@ First release. Gives each data hall a ready / conditional / not-ready verdict, w
 - `assets/report.md` and `assets/readiness_matrix.png` outputs.
 - Tests for each rule, the loaders and adapter, and a check that the README's Result block and the committed report match the code. ruff linting, CI on Python 3.11 and 3.12, LF line endings via `.gitattributes`.
 
+[1.1.1]: https://github.com/alexc-hue/commissioning-readiness-gate/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/alexc-hue/commissioning-readiness-gate/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/alexc-hue/commissioning-readiness-gate/releases/tag/v1.0.0
