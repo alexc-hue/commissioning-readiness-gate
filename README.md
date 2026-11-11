@@ -14,15 +14,17 @@ comes with its reasons.
 > library, but the site doesn't exist. This is a model of how readiness
 > gates can be checked, not a record of real data-center commissioning work.
 
-Part of a small project-controls toolkit:
+The project-controls toolkit is six tools:
 [project-controls-dashboard](https://github.com/alexc-hue/project-controls-dashboard),
 [schedule-health-analyzer](https://github.com/alexc-hue/schedule-health-analyzer),
 [change-control-register](https://github.com/alexc-hue/change-control-register),
 [risk-trend-tracker](https://github.com/alexc-hue/risk-trend-tracker),
 [project-controls-reporting-engine](https://github.com/alexc-hue/project-controls-reporting-engine),
-[recovery-scenario-planner](https://github.com/alexc-hue/recovery-scenario-planner),
-[facility-status-digital-twin](https://github.com/alexc-hue/facility-status-digital-twin),
-**commissioning-readiness-gate** (this repo).
+[recovery-scenario-planner](https://github.com/alexc-hue/recovery-scenario-planner).
+Two separate practice models apply the same methods to data center
+delivery, on synthetic data:
+**commissioning-readiness-gate** (this repo),
+[facility-status-digital-twin](https://github.com/alexc-hue/facility-status-digital-twin).
 
 ## Where this comes from
 
